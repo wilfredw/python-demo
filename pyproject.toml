@@ -26,6 +26,6 @@ default = true
 [tool.uv.workspace]
 members = [
     "common-lib",
-    "fastapi",
     "asyncio_event_loop",
+    "fastapi_app",
 ]

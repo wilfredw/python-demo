@@ -1,5 +1,5 @@
 [project]
-name = "fastapi"
+name = "fastapi-app"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
@@ -7,10 +7,17 @@ authors = [
     { name = "Wilfred Wang", email = "wilfred.wang@zoom.us" }
 ]
 requires-python = ">=3.12"
-dependencies = []
+dependencies = [
+    "fastapi[standard]>=0.1.0",
+    "uvicorn>=0.54.0",
+]
 
 [project.scripts]
-fastapi = "fastapi:main"
+fastapi-app = "fastapi_app:main"
+
+[[tool.uv.index]]
+url = "https://artifacts.corp.zoom.us/artifactory/api/pypi/zoom-pypi-virtual/simple"
+default = true
 
 [build-system]
 requires = ["uv_build>=0.13.0,<0.14.0"]
