@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "receiptId": "7a1aef29-a245-40fe-af08-5475dc7df382",
+  "status": "current",
+  "command": "deliver",
+  "type": "architecture",
+  "input": "/Users/WilfredWang/myprojects/python-demo/.archify/architecture-fastapi-layers-20261015-180809/candidate.json",
+  "output": "/Users/WilfredWang/myprojects/python-demo/.archify/architecture-fastapi-layers-20261015-180809/fastapi-project-structure.html",
+  "specification": {
+    "sha256": "448970173aee3cd093e8b86fc842f41b96009a20796e1857e7f12e1767bc9308",
+    "bytes": 3901
+  },
+  "artifact": {
+    "sha256": "1bb897d3f645a12cf8c9ede8a064d3a6774a269403a28d43bcd87fe395985315",
+    "bytes": 763270
+  }
+}

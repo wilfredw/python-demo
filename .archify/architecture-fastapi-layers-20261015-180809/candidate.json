@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "大型 FastAPI 项目的分层组织",
+    "locale": "zh-CN",
+    "output": ".archify/architecture-fastapi-layers-20261015-180809/fastapi-project-structure.html",
+    "quality_profile": "showcase"
+  },
+  "components": [
+    { "id": "client", "type": "external", "label": "调用方", "sublabel": "Web / Mobile / 其他服务", "pos": [40, 330], "size": [120, 64] },
+    { "id": "factory", "type": "backend", "label": "App Factory", "sublabel": "create_app()", "pos": [225, 155], "size": [138, 64] },
+    { "id": "app", "type": "backend", "label": "FastAPI app", "sublabel": "每个 worker 一个实例", "pos": [225, 330], "size": [138, 64] },
+    { "id": "router", "type": "backend", "label": "APIRouter", "sublabel": "按版本 / 资源拆分", "pos": [437, 330], "size": [136, 64] },
+    { "id": "endpoint", "type": "backend", "label": "Endpoint methods", "sublabel": "薄 HTTP 适配器", "pos": [648, 330], "size": [146, 64] },
+    { "id": "schemas", "type": "backend", "label": "Pydantic Schemas", "sublabel": "Request / Response DTO", "pos": [648, 155], "size": [146, 64] },
+    { "id": "service", "type": "backend", "label": "Service / Use Case", "sublabel": "业务用例与事务边界", "pos": [868, 330], "size": [146, 64] },
+    { "id": "domain", "type": "backend", "label": "Domain Entities", "sublabel": "复杂业务时独立建模", "pos": [868, 510], "size": [146, 64] },
+    { "id": "repository", "type": "backend", "label": "Repository", "sublabel": "接口 + 持久化适配器", "pos": [1085, 330], "size": [154, 64] },
+    { "id": "orm", "type": "database", "label": "ORM Models", "sublabel": "SQLAlchemy 表映射", "pos": [1085, 510], "size": [154, 64] },
+    { "id": "database", "type": "database", "label": "数据库", "sublabel": "PostgreSQL 等", "pos": [1315, 330], "size": [142, 64] }
+  ],
+  "connections": [
+    { "id": "client-http", "from": "client", "to": "app", "label": "HTTP", "variant": "emphasis" },
+    { "id": "factory-builds-app", "from": "factory", "to": "app", "label": "组装一次", "fromSide": "bottom", "toSide": "top" },
+    { "id": "app-includes-router", "from": "app", "to": "router", "label": "注册路由" },
+    { "id": "router-dispatch", "from": "router", "to": "endpoint", "label": "路由匹配" },
+    { "id": "endpoint-schema", "from": "endpoint", "to": "schemas", "label": "校验 / 序列化", "fromSide": "top", "toSide": "bottom" },
+    { "id": "endpoint-service", "from": "endpoint", "to": "service", "label": "业务调用" },
+    { "id": "service-domain", "from": "service", "to": "domain", "label": "执行业务规则", "fromSide": "bottom", "toSide": "top" },
+    { "id": "service-repository", "from": "service", "to": "repository", "label": "依赖接口" },
+    { "id": "repository-orm", "from": "repository", "to": "orm", "label": "映射 / CRUD", "fromSide": "bottom", "toSide": "top" },
+    { "id": "repository-database", "from": "repository", "to": "database", "label": "SQL" }
+  ],
+  "cards": [
+    { "dot": "cyan", "title": "App 与路由", "items": ["main.py 暴露 app = create_app()，供 Uvicorn / Gunicorn 加载", "Factory 集中注册 router、middleware、lifespan 和异常处理", "路由按 API 版本与资源拆分，endpoint 只处理 HTTP 语义"] },
+    { "dot": "violet", "title": "三类 Model", "items": ["Pydantic Schema：请求 / 响应契约", "Domain Entity：业务概念与规则，复杂领域再单独引入", "ORM Model：SQLAlchemy 持久化映射；不要让 API 契约直接等同数据库表"] },
+    { "dot": "emerald", "title": "依赖与生命周期", "items": ["Depends 组装 service / repository，并按请求提供数据库 session", "Engine、连接池等共享资源放在 lifespan 管理", "请求间不共享可变状态；测试通过 app factory 与 dependency overrides 隔离"] }
+  ]
+}

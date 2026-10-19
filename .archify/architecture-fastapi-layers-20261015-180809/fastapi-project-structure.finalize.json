@@ -1,0 +1,371 @@
+{
+  "schemaVersion": 1,
+  "ok": false,
+  "command": "finalize",
+  "status": "fail",
+  "type": "architecture",
+  "quality": "showcase",
+  "startedAt": "2026-10-15T10:12:11.451Z",
+  "specification": {
+    "path": "/Users/WilfredWang/myprojects/python-demo/.archify/architecture-fastapi-layers-20261015-180809/candidate.json",
+    "sha256": "448970173aee3cd093e8b86fc842f41b96009a20796e1857e7f12e1767bc9308",
+    "bytes": 3901
+  },
+  "artifact": {
+    "path": "/Users/WilfredWang/myprojects/python-demo/.archify/architecture-fastapi-layers-20261015-180809/fastapi-project-structure.html",
+    "sha256": "1bb897d3f645a12cf8c9ede8a064d3a6774a269403a28d43bcd87fe395985315",
+    "bytes": 763270
+  },
+  "stages": {
+    "validate": {
+      "status": "pass",
+      "exitCode": 0,
+      "durationMs": null,
+      "execution": "embedded-in-deliver",
+      "command": [
+        "/Users/WilfredWang/.nvm/versions/node/v24.19.0/bin/node",
+        "/Users/WilfredWang/.agents/skills/archify/bin/archify.mjs",
+        "deliver",
+        "architecture",
+        "/Users/WilfredWang/myprojects/python-demo/.archify/architecture-fastapi-layers-20261015-180809/candidate.json",
+        "/Users/WilfredWang/myprojects/python-demo/.archify/architecture-fastapi-layers-20261015-180809/fastapi-project-structure.html",
+        "--quality",
+        "showcase",
+        "--json"
+      ],
+      "receipt": {
+        "schemaVersion": 1,
+        "ok": true,
+        "command": "validate",
+        "specification": {
+          "sha256": "448970173aee3cd093e8b86fc842f41b96009a20796e1857e7f12e1767bc9308",
+          "bytes": 3901
+        },
+        "validation": {
+          "checksPassed": 9,
+          "checkCount": 9,
+          "compositionProfile": "showcase",
+          "compositionStatus": "pass",
+          "errors": 0,
+          "warnings": 0
+        }
+      }
+    },
+    "deliver": {
+      "status": "pass",
+      "exitCode": 0,
+      "durationMs": 192,
+      "command": [
+        "/Users/WilfredWang/.nvm/versions/node/v24.19.0/bin/node",
+        "/Users/WilfredWang/.agents/skills/archify/bin/archify.mjs",
+        "deliver",
+        "architecture",
+        "/Users/WilfredWang/myprojects/python-demo/.archify/architecture-fastapi-layers-20261015-180809/candidate.json",
+        "/Users/WilfredWang/myprojects/python-demo/.archify/architecture-fastapi-layers-20261015-180809/fastapi-project-structure.html",
+        "--quality",
+        "showcase",
+        "--json"
+      ],
+      "receipt": {
+        "schemaVersion": 1,
+        "receiptId": "7a1aef29-a245-40fe-af08-5475dc7df382",
+        "ok": true,
+        "command": "deliver",
+        "type": "architecture",
+        "input": "/Users/WilfredWang/myprojects/python-demo/.archify/architecture-fastapi-layers-20261015-180809/candidate.json",
+        "output": "/Users/WilfredWang/myprojects/python-demo/.archify/architecture-fastapi-layers-20261015-180809/fastapi-project-structure.html",
+        "specification": {
+          "sha256": "448970173aee3cd093e8b86fc842f41b96009a20796e1857e7f12e1767bc9308",
+          "bytes": 3901
+        },
+        "artifact": {
+          "sha256": "1bb897d3f645a12cf8c9ede8a064d3a6774a269403a28d43bcd87fe395985315",
+          "bytes": 763270
+        },
+        "validation": {
+          "checksPassed": 9,
+          "checkCount": 9,
+          "compositionProfile": "showcase",
+          "compositionStatus": "pass",
+          "errors": 0,
+          "warnings": 0
+        },
+        "update": {
+          "status": "unavailable",
+          "installedVersion": null,
+          "availableVersion": null,
+          "releaseNotes": null,
+          "checkedAt": null,
+          "source": null,
+          "noticeRequired": false,
+          "noticeText": null,
+          "reason": "disabled"
+        }
+      }
+    },
+    "check": {
+      "status": "pass",
+      "exitCode": 0,
+      "durationMs": 91,
+      "command": [
+        "/Users/WilfredWang/.nvm/versions/node/v24.19.0/bin/node",
+        "/Users/WilfredWang/.agents/skills/archify/bin/archify.mjs",
+        "check",
+        "/Users/WilfredWang/myprojects/python-demo/.archify/architecture-fastapi-layers-20261015-180809/fastapi-project-structure.html",
+        "--require-provenance"
+      ],
+      "receipt": {
+        "ok": true,
+        "file": "/Users/WilfredWang/myprojects/python-demo/.archify/architecture-fastapi-layers-20261015-180809/fastapi-project-structure.html",
+        "artifact": {
+          "sha256": "1bb897d3f645a12cf8c9ede8a064d3a6774a269403a28d43bcd87fe395985315",
+          "bytes": 763270
+        },
+        "checks": [
+          {
+            "name": "single_svg",
+            "ok": true,
+            "details": [
+              "found 1 <svg> block(s)"
+            ]
+          },
+          {
+            "name": "finite_svg",
+            "ok": true,
+            "details": []
+          },
+          {
+            "name": "orthogonal_arrows",
+            "ok": true,
+            "details": []
+          },
+          {
+            "name": "label_route_clearance",
+            "ok": true,
+            "details": []
+          },
+          {
+            "name": "relationship_crossings",
+            "ok": true,
+            "details": []
+          },
+          {
+            "name": "relationship_corridors",
+            "ok": true,
+            "details": []
+          },
+          {
+            "name": "container_border_runs",
+            "ok": true,
+            "details": []
+          },
+          {
+            "name": "route_rhythm",
+            "ok": true,
+            "details": []
+          },
+          {
+            "name": "legend_clearance",
+            "ok": true,
+            "details": []
+          }
+        ],
+        "composition": {
+          "schemaVersion": 1,
+          "profile": "showcase",
+          "status": "pass",
+          "summary": {
+            "errors": 0,
+            "warnings": 0
+          },
+          "metrics": {
+            "properCrossings": 0,
+            "resolvedCrossovers": 0,
+            "ambiguousCorridors": 0,
+            "arrowheadCollisions": 0,
+            "containerBorderRuns": 0,
+            "labelRouteClearanceIssues": 0,
+            "labelCanvasOverflowIssues": 0,
+            "minLabelRouteClearance": 52.9,
+            "desktopReadabilityIssues": 0,
+            "viewportHeightIssues": 0,
+            "minProjectedNodeTextPx": 7.193052772211089,
+            "maxBends": 0,
+            "routesOverSuggestedBends": 0,
+            "maxStretch": 1,
+            "routesOverSuggestedStretch": 0,
+            "minSegmentPx": 65,
+            "minInteriorSegmentPx": null,
+            "shortSegmentCount": 0,
+            "shortEndpointSegmentCount": 0,
+            "shortInteriorSegmentCount": 0,
+            "microSegmentCount": 0
+          },
+          "suggestedLimits": {
+            "bendsPerRelationship": 2,
+            "stretch": 1.35,
+            "segmentPx": 16,
+            "microSegmentPx": 8
+          },
+          "routeReview": {
+            "crossings": [],
+            "detours": []
+          },
+          "leadingSpace": {
+            "measured": true,
+            "emptyTopPx": 155,
+            "emptyTopRatio": 0.241,
+            "occupiedTop": 155,
+            "viewBoxTop": 0,
+            "canvasHeight": 642,
+            "typicalNodeHeight": 64,
+            "reviewSuggested": true
+          },
+          "desktopReadability": {
+            "budgetBasis": "recognized-declared-wide",
+            "readerContract": "declared-wide-v1",
+            "availableDiagramWidth": 1346,
+            "actualBudgetPx": 1346,
+            "actualReaderWidth": 1376,
+            "desiredReaderWidth": 1433.4375,
+            "viewportCap": 1376,
+            "limit": "viewport-cap",
+            "requestedTargetPx": 7.5,
+            "requestedTargetMet": false,
+            "hardFloorPx": 6,
+            "hardFloorMet": true,
+            "minimumOwner": {
+              "kind": "edge",
+              "id": "client-http",
+              "from": "client",
+              "to": "app"
+            },
+            "minimumSourceTextPx": 8,
+            "minimumProjectedTextPx": 7.193052772211089,
+            "semanticTextCount": 32
+          },
+          "issues": []
+        },
+        "provenance": "current",
+        "deliveryReceiptId": "7a1aef29-a245-40fe-af08-5475dc7df382"
+      }
+    },
+    "browser-check": {
+      "status": "fail",
+      "exitCode": 1,
+      "durationMs": 13,
+      "command": [
+        "/Users/WilfredWang/.nvm/versions/node/v24.19.0/bin/node",
+        "/Users/WilfredWang/.agents/skills/archify/bin/archify.mjs",
+        "browser-check",
+        "/Users/WilfredWang/myprojects/python-demo/.archify/architecture-fastapi-layers-20261015-180809/fastapi-project-structure.html",
+        "--json",
+        "--require-provenance"
+      ],
+      "execution": "in-process",
+      "receipt": {
+        "schemaVersion": 1,
+        "ok": false,
+        "command": "browser-check",
+        "evidenceKind": "automated-browser",
+        "status": "fail",
+        "visualReview": "not-requested",
+        "provenance": "current",
+        "deliveryReceiptId": "7a1aef29-a245-40fe-af08-5475dc7df382",
+        "artifact": {
+          "path": "/Users/WilfredWang/myprojects/python-demo/.archify/architecture-fastapi-layers-20261015-180809/fastapi-project-structure.html",
+          "sha256": "1bb897d3f645a12cf8c9ede8a064d3a6774a269403a28d43bcd87fe395985315",
+          "bytes": 763270
+        },
+        "state": {
+          "detail": "read",
+          "motion": "still"
+        },
+        "chrome": {
+          "status": "available",
+          "executable": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
+        },
+        "diagnostics": [
+          {
+            "code": "viewer/browser-check-runtime",
+            "severity": "error",
+            "message": "browser-check could not complete its Chrome inspection.",
+            "subject": {
+              "artifact": "/Users/WilfredWang/myprojects/python-demo/.archify/architecture-fastapi-layers-20261015-180809/fastapi-project-structure.html"
+            },
+            "evidence": {
+              "reason": "Chrome DevTools read pipe failed: stream ended\nChrome process: still running.\nChrome transport: Node v24.19.0, libuv 1.52.1, darwin; pid=16906, exitCode=null, signalCode=null.\nChrome read pipe: readable=false, ended=true, destroyed=false, receivedBytes=0, messages=0, bufferedBytes=0.\nChrome write pipe: writable=true, ended=false, destroyed=false, completedWrites=1, writtenBytes=50, bufferedBytes=0."
+            },
+            "supportedFixes": [
+              "resolve the reported Chrome inspection error, then rerun browser-check"
+            ]
+          }
+        ],
+        "containment": {
+          "status": "fail",
+          "policy": "fit-or-reader-declared-readable-vertical-scroll",
+          "viewports": []
+        },
+        "themeStates": {
+          "status": "fail",
+          "viewports": []
+        },
+        "readability": {
+          "status": "fail",
+          "minimumProjectedNodeTextPx": 6,
+          "viewports": []
+        },
+        "viewerChrome": {
+          "status": "fail",
+          "viewports": []
+        },
+        "captures": {
+          "status": "not-requested",
+          "screenshots": [],
+          "contactSheet": null
+        },
+        "sidecars": {
+          "receipt": "fastapi-project-structure.browser-check.json",
+          "files": []
+        },
+        "error": "Chrome DevTools read pipe failed: stream ended\nChrome process: still running.\nChrome transport: Node v24.19.0, libuv 1.52.1, darwin; pid=16906, exitCode=null, signalCode=null.\nChrome read pipe: readable=false, ended=true, destroyed=false, receivedBytes=0, messages=0, bufferedBytes=0.\nChrome write pipe: writable=true, ended=false, destroyed=false, completedWrites=1, writtenBytes=50, bufferedBytes=0."
+      }
+    }
+  },
+  "diagnostics": [
+    {
+      "code": "viewer/browser-check-runtime",
+      "severity": "error",
+      "message": "browser-check could not complete its Chrome inspection.",
+      "subject": {
+        "artifact": "/Users/WilfredWang/myprojects/python-demo/.archify/architecture-fastapi-layers-20261015-180809/fastapi-project-structure.html"
+      },
+      "evidence": {
+        "reason": "Chrome DevTools read pipe failed: stream ended\nChrome process: still running.\nChrome transport: Node v24.19.0, libuv 1.52.1, darwin; pid=16906, exitCode=null, signalCode=null.\nChrome read pipe: readable=false, ended=true, destroyed=false, receivedBytes=0, messages=0, bufferedBytes=0.\nChrome write pipe: writable=true, ended=false, destroyed=false, completedWrites=1, writtenBytes=50, bufferedBytes=0."
+      },
+      "supportedFixes": [
+        "resolve the reported Chrome inspection error, then rerun browser-check"
+      ]
+    }
+  ],
+  "evidence": {
+    "receipt": "/Users/WilfredWang/myprojects/python-demo/.archify/architecture-fastapi-layers-20261015-180809/fastapi-project-structure.finalize.json",
+    "summaryReceipt": "/Users/WilfredWang/myprojects/python-demo/.archify/architecture-fastapi-layers-20261015-180809/fastapi-project-structure.finalize-summary.json",
+    "browserCheckReceipt": "/Users/WilfredWang/myprojects/python-demo/.archify/architecture-fastapi-layers-20261015-180809/fastapi-project-structure.browser-check.json"
+  },
+  "visualReview": "not-requested",
+  "failedStage": "browser-check",
+  "finishedAt": "2026-10-15T10:12:11.844Z",
+  "durationMs": 393,
+  "update": {
+    "status": "unavailable",
+    "installedVersion": null,
+    "availableVersion": null,
+    "releaseNotes": null,
+    "checkedAt": null,
+    "source": null,
+    "noticeRequired": false,
+    "noticeText": null,
+    "reason": "cache-unavailable"
+  }
+}
