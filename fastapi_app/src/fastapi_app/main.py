@@ -1,4 +1,5 @@
-from fastapi import FastAPI, HTTPException, status
-from pydantic import BaseModel, Field
+"""ASGI entry point for the FastAPI application."""
 
-app = FastAPI(title="Wilfred FastAPI App")
+from .app_factory import create_app
+
+app = create_app()

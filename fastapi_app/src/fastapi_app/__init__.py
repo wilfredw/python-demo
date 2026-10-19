@@ -1,2 +1,5 @@
-def main() -> None:
-    print("Hello from fastapi-app!")
+"""FastAPI application package."""
+
+from .startup import main
+
+__all__ = ["main"]
